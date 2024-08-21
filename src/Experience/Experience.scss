@@ -1,53 +1,103 @@
-.experienceMain-div{
-width: 90%;
-margin: 0 auto;
-}
-
-.experienceTitle{
-    color: white;
-    font-weight: 600;
-    padding-top: 150px;
-    margin-bottom: 80px;
-    font-size: 50px;
-}
-
-.experiencebox1{
-    width: 620px;
-    height: 320px;
-    border: 1px solid white;
-    border-radius: 20px;
-    position: relative;
+.experienceBox{
     background-color: grey;
-}
-.experiencebox2{
-    width: 400px;
-    height: 300px;
-    border: 1px solid white;
-    border-radius: 20px;
+    height: 250px;
+    width: 420px;
+    border-radius: 10px;
+    overflow: hidden;
+    justify-content: center;
+    border: solid 0.5px rgb(69, 68, 68);
+    position: relative;
+    @media (max-width:1284px) {
+        width: 100%;
+        height: auto;
+    }
 }
 
-.boxCombined-div{
+.experienceBox:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+   opacity: 0;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 0, 0, 0) 0%,
+        rgb(0, 0, 0)
+    );
+    transition: opacity 0.3s ease-in-out;
+}
+
+.descriptionButtons{
+    padding-top: 15px;
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    gap: 10px;
+    color: black;
+    padding-bottom: 15px;
 }
 
-.smallerbox-div{
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
+.descriptionButtonText{
+    background-color: #fff;
+    border-radius: 10px;
+    color: #000;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 12px;
 }
 
-.mediumBox-div{
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
+.experienceBox:hover::before{
+    opacity: 1;
 }
 
-.line{
-    color: white;
-    padding-top: 50px;
-    padding-bottom:50px;
-    opacity: 0.2;
+
+.experienceBox img{
+    width: 100%;
+    height: 100%;
+   
 }
 
+.description{
+position: absolute;
+opacity: 0;
+bottom: 0;
+left: 0;
+right: 0;
+margin-left: 30px;
+color: white;
+transition: opacity 0.3s ease-in-out;
+}
+
+.description:hover{
+    opacity: 1;
+}
+
+.experienceBox:hover .description {
+    opacity: 1;
+
+}
+
+.descriptionTitle{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.experienceBoxDiv{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
+    @media (max-width:1284px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width:768px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
+
+
+.experienceDiv{
+    width: 90%;
+    margin: 0 auto;
+}

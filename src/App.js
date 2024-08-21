@@ -1,28 +1,32 @@
 import React from "react";
 import "./App.scss";
-import LandingPage from "./LandingPage/LandingPage";
-import Starfield from 'react-starfield';
 import About from "./About/About"
 import Experience from "./Experience/Experience";
-import SidebarPage from "./sidebar/SidebarPage";
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Contact from './Pages/Contact/ContactPage'
+import HomePage from "./Home/HomePage";
+import Resume from './Pages/Resume/ResumePage'
+import Starfield from 'react-starfield';
 
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
+      <div className="App">
       <div className="starfieldContainer">
-            <Starfield
-            
-        starCount={5000}
-        starColor={[255, 255, 255]}
-        speedFactor={0.01}
-        backgroundColor="black"
-      />
+          <Starfield
+            starCount={5000}
+            starColor={[255, 255, 255]}
+            speedFactor={0.01}
+            backgroundColor="black"
+          />
+        </div>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/resume" element = {<Resume/>}/>
+        </Routes>
       </div>
-<LandingPage/>
-<About/>
-<Experience/>
-<SidebarPage/>
-    </div>
+    </BrowserRouter>
   );
 }
 

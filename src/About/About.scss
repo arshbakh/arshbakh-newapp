@@ -28,12 +28,19 @@ margin: 0 auto;
 
 .skills{
     
-    display: flex;
-    flex-direction: row;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 40px;
+   @media (max-width:1284px) {
+    grid-template-columns: repeat(2, 1fr);
+   }
+   @media (max-width:786px) {
+    grid-template-columns: repeat(1, 1fr);
+   }
 }
 
 .meIntro{
-    width:30%;
+    width:100%;
     color: white;
     line-height: 1.8;
 }
@@ -41,20 +48,21 @@ margin: 0 auto;
 .line1{
     display: flex;
     flex-direction: column;
-    padding-left: 100px;
+   
     gap: 20px;
 }
 
 .line2{
     display: flex;
     flex-direction: column;
-    padding-left: 100px;
+  
     gap: 20px;
 }
 
 .programmingSkills{
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .programmingLang{
@@ -68,7 +76,8 @@ margin: 0 auto;
 
 .languageTitle{
     color: white;
-    padding-left: 100px;
+  display: flex;
+  justify-content: center;
 }
 
 
@@ -181,4 +190,32 @@ margin: 0 auto;
     display: flex;
     flex-direction: row;
     gap: 30px;
+}
+
+.innerRoleButton{
+  background-color: rgb(215, 203, 203);
+  border-radius: 10px;
+  color: #000;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 10px 12px;
+}
+
+.roleButtons{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.roleTitle{
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.aboutUsShort{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }

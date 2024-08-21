@@ -21,19 +21,19 @@ display: flex;
       display: block !important;
       color: white;
 
-      margin: 10px 0px 0px 10px !important;
+      margin: 0px 0px 0px 30px !important;
     }
 
     .projectDate {
       display: block !important;
       color: rgb(172, 160, 160);
       font-size: 20px;
-      margin: 10px 10px 00px 0px !important;
+      margin: 0px 30px 00px 0px !important;
     }
     .projectText {
       display: block !important;
       color: white;
-        margin: 0px 0px 20px 10px;
+        margin: 0px 0px 0px 30px;
     }
 
     .projectText-div {
@@ -100,5 +100,5 @@ display: flex;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
